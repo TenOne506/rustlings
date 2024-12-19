@@ -10,6 +10,7 @@ fn factorial(num: u64) -> u64 {
     // - additional variables
     // For an extra challenge, don't use:
     // - recursion
+    (1..=num).fold(1, |acc, x| acc.checked_mul(x).unwrap_or(u64::MAX))
 }
 
 fn main() {
